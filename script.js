@@ -9,10 +9,10 @@ btn.addEventListener("click", () => {
     // document.getElementsByClassName("input").value = "   "
    }
 });
-window.addEventListener('contextmenu', function (e) { 
-    // do something here... 
-    e.preventDefault(); 
-  }, false);
+// window.addEventListener('contextmenu', function (e) { 
+//     // do something here... 
+//     e.preventDefault(); 
+//   }, false);
 download.addEventListener("click", () => {
     try {
         fetch(imageSource.src)

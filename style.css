@@ -4,16 +4,22 @@
 }
 *{
     margin: 0;
-    padding: 0%;
+    padding: 0;
     box-sizing: border-box;
     font-family: quicksand;
 }
 html,body{
+  margin: 0;
+  padding: 0;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+    
 }
 
 #main{
+  overflow-x: hidden;
+
   /* position: relative; */
   z-index: 10;
   background-image: url("https://img.freepik.com/free-vector/w-colours-pattern-design-template_23-2149844823.jpg?w=740&t=st=1714899828~exp=1714900428~hmac=f725e8480f85f8f3416b09fcc4c043202a97b4aee59a8abf68a256ddaa9b6863");
@@ -294,6 +300,7 @@ html,body{
   @media screen and (max-width: 1076px){
 
 #main{
+  width: 100%;
   top: 0%;
   height: max-content;
   flex-direction: column;
