@@ -6,13 +6,13 @@ btn.addEventListener("click", () => {
     let inputField = document.getElementById("link").value;
    if(inputField.length!==0){
     imageSource.src = apiUrl+inputField;
-    // document.getElementsByClassName("input").value = "   "
+    document.getElementById("link").value=" ";
+    
    }
 });
-// window.addEventListener('contextmenu', function (e) { 
-//     // do something here... 
-//     e.preventDefault(); 
-//   }, false);
+window.addEventListener('contextmenu', function (e) { 
+    e.preventDefault(); 
+  }, false);
 download.addEventListener("click", () => {
     try {
         fetch(imageSource.src)
@@ -34,6 +34,7 @@ download.addEventListener("click", () => {
     }
 });
 
+
 document.querySelector('.copy').addEventListener('click', () => {
     try {
         fetch(imageSource.src)
@@ -41,16 +42,21 @@ document.querySelector('.copy').addEventListener('click', () => {
             .then(blob => {
                 console.log('Blob:', blob);
                 const url = URL.createObjectURL(blob);
-                const img = document.createElement('img');
+                const img = new Image();
+                img.crossOrigin = "Anonymous"; // Allow cross-origin resource sharing
                 img.src = url;
-                document.body.appendChild(img);
-                img.addEventListener('load', () => {
-                    navigator.clipboard.writeText(url);
-
-                    console.log('Image copied to clipboard:', img);
-                    document.body.removeChild(img);
-                    URL.revokeObjectURL(url);
-                });
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                    canvas.toBlob(canvasBlob => {
+                        const item = new ClipboardItem({ "image/png": canvasBlob });
+                        navigator.clipboard.write([item]);
+                        console.log('Image copied to clipboard:', canvasBlob);
+                    });
+                };
             })
             .catch(error => {
                 console.error('Error fetching or processing image:', error);
@@ -59,4 +65,6 @@ document.querySelector('.copy').addEventListener('click', () => {
         console.error('Error:', error);
     }
 });
+
+
 
