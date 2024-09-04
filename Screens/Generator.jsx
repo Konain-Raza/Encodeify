@@ -48,13 +48,12 @@ const Generator = () => {
     }
     setQRCode('');
   };
+
   const saveQRCode = async () => {
     try {
       const uri = await viewShotRef.current.capture();
-      const date = new Date();
-      const formattedDate = date.toISOString().replace(/[-:.TZ]/g, '');
-      const path = `${RNFS.DownloadDirectoryPath}/${qrCode || 'QRCode'}_${formattedDate}.png`;
-  
+      const path = `${RNFS.DocumentDirectoryPath}/${qrCode || 'QRCode'}.png`;
+
       await RNFS.writeFile(path, uri, 'base64');
       await RNFS.scanFile(path);
       Alert.alert('🎉 Success!', 'Your QR Code is ready and saved!');
@@ -63,7 +62,6 @@ const Generator = () => {
       Alert.alert('Error', 'Failed to download QR Code');
     }
   };
-  
 
   return (
     <View className="flex-1 items-center justify-center bg-gray-900 p-6">
