@@ -2,53 +2,80 @@
   <img src="./Assets/Images/icon.png" alt="Encodeify Logo" width="150" height="150">
 </p>
 
-# Encodeify 🚀
+<h1 align="center" style="font-size: 36px;">Encodeify 📲</h1>
 
-Encodeify is a versatile tool that effortlessly bridges the gap between the digital and physical worlds by generating QR codes for various types of content. Whether you need to encode website URLs, contact information, Wi-Fi network details, or more, Encodeify has got you covered. With its intuitive interface and powerful features, Encodeify aims to elevate your connectivity experience to new heights.
+<p align="center">Bridging the Digital & Physical Worlds, One QR Code at a Time! 🌐🔗<br>
+Welcome to Encodeify—your ultimate tool for generating and scanning QR codes. Whether you’re using our web app or mobile app, Encodeify makes it easy to encode and decode information with ease. Let’s make connectivity seamless! 🚀</p>
 
-## Demo 🎥
+<p align="center">
+  <a href="https://encodeify.netlify.app/">
+    <img src="./Assets/Images/preview.png" alt="Web App Preview" width="1000">
+  </a>
+</p>
 
-Check out the live demo of Encodeify: [Encodeify Demo](https://encodeify.netlify.app/)
+## 📋 Table of Contents
 
-## Features ✨
+- [🌟 What is Encodeify?](#what-is-encodeify)
+- [🚀 Features That Shine](#features-that-shine)
+- [🔧 Web Version](#web-version)
+- [📱 Mobile Version](#mobile-version)
+- [🛠️ Getting Started](#getting-started)
+- [🤝 Contribute & Collaborate](#contribute--collaborate)
+- [📜 License Info](#license-info)
+- [📧 Contact Us](#contact-us)
 
-- **Generate QR Codes**: Instantly create QR codes for websites, contacts, Wi-Fi networks, and more.
-- **Easy to Use**: Encodeify provides a user-friendly interface, making it simple for users to create QR codes quickly.
-- **Versatile**: Encodeify supports various types of content, allowing users to encode a wide range of information into QR codes.
-- **Copy and Download**: Encodeify includes functionality to copy the generated QR code image to the clipboard and download it for offline use.
-- **Innovative**: Stay ahead of the curve with Encodeify's innovative approach to digital connectivity.
-- **Fast and Reliable**: Encodeify ensures fast and reliable QR code generation, so you can get your codes when you need them.
+# 🌟 What is Encodeify?
 
-## Getting Started 🚀
+Welcome to **Encodeify**! 🎉 Your comprehensive solution for generating and scanning QR codes. Whether you're on the web or on the go with your mobile device, Encodeify makes sharing and accessing information simpler and faster. From creating QR codes for websites to scanning them on the fly, Encodeify is here to streamline your digital interactions. 🌐✨
 
-To get started with Encodeify, simply visit the [Encodeify Demo](https://encodeify.netlify.app/) and follow these steps:
+# 🚀 Features That Shine
 
-1. **Input**: Enter the link or text you want to encode into a QR code into the provided input field.
-2. **Generate**: Click on the "Generate" button to create the QR code.
-3. **Copy**: Use the "Copy" button to copy the generated QR code image to the clipboard.
-4. **Download**: Alternatively, click on the "Download" button to save the QR code image to your device.
+- **Instant QR Code Generation**: Easily create QR codes for URLs, contact info, Wi-Fi networks, and more. ⚡
+- **User-Friendly Interface**: Both our web and mobile apps offer a smooth and intuitive experience. 🎯
+- **Versatile Encoding & Scanning**: Encode a variety of information and scan QR codes with advanced options. 📊
+- **Copy & Download Options**: On the web, you can copy or download QR codes. 📥
+- **Mobile Scanning Features**:
+  - **Scan QR Codes**: Use your camera to scan QR codes quickly. 📷
+  - **Flashlight Toggle**: Turn the flashlight on or off for better scanning in low light. 🔦
+  - **Camera Switching**: Switch between the front and back cameras effortlessly. 🔄
 
-## Contributing 🤝
+# 🔧 Web Version
 
-We welcome contributions from the community to help improve Encodeify. If you'd like to contribute, please follow these guidelines:
+The web version of Encodeify is perfect for quick and easy QR code creation:
 
-1. Fork the Encodeify repository.
+1. **Visit Encodeify Web App**: Go to [Encodeify Demo](https://encodeify.netlify.app/) to start using the web application.
+2. **Input Data**: Enter the URL or text you want to encode.
+3. **Generate & Save**: Click "Generate" to create your QR code, then copy or download it as needed.
+
+# 📱 Mobile Version
+
+Our mobile app offers a powerful QR code scanning experience with additional features:
+
+1. **Download the App**: Get the mobile version from your app store (link to be added).
+2. **Generate QR Codes**: Create QR codes directly from your phone for any type of content.
+3. **Scan QR Codes**: Use the app's built-in camera to scan QR codes.
+   - **Flashlight Toggle**: Tap the flashlight icon to switch it on or off.
+   - **Camera Switch**: Easily switch between front and back cameras.
+4. **Save and Share**: Save scanned codes or share them directly from the app.
+
+# 🛠️ Getting Started
+
+1. **For Web Users**: Visit [Encodeify Demo](https://encodeify.netlify.app/) to start creating QR codes.
+2. **For Mobile Users**: Download the mobile app, generate QR codes, and use the scan feature with added functionality.
+
+# 🤝 Contribute & Collaborate
+
+We welcome contributions from the community! If you’d like to help improve Encodeify:
+
+1. Fork the Encodeify repository on GitHub.
 2. Create a new branch for your feature or bug fix.
-3. Make your changes and ensure that all tests pass.
-4. Submit a pull request with a clear description of your changes.
+3. Implement your changes and ensure all tests pass.
+4. Submit a pull request with a clear description of your updates.
 
-## Deployment 🚀
+# 📜 License Info
 
-Encodeify is deployed on Netlify. You can access the live version of the application at [https://encodeify.netlify.app/](https://encodeify.netlify.app/)
+Encodeify is licensed under the MIT License, promoting open collaboration and sharing. Check out the [LICENSE](LICENSE) file for more details. 📄
 
-## Technologies Used 💻
+# 📧 Contact Us
 
-Encodeify is built using HTML, CSS, and JavaScript. It is responsive and works seamlessly across different devices and screen sizes.
-
-## License 📝
-
-Encodeify is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact 📧
-
-If you have any questions or feedback about Encodeify, feel free to contact us at [konainraza105@gmail.com](mailto:konainraza105@gmail.com).
+Have questions or feedback? Reach out to us at [konainraza105@gmail.com](mailto:konainraza105@gmail.com). We’d love to hear from you! ✉️
