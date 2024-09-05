@@ -5,13 +5,22 @@
 <h1 align="center" style="font-size: 36px;">Encodeify 📲</h1>
 
 <p align="center">Bridging the Digital & Physical Worlds, One QR Code at a Time! 🌐🔗<br>
-Welcome to Encodeify—your ultimate tool for generating and scanning QR codes. Whether you’re using our web app or mobile app, Encodeify makes it easy to encode and decode information with ease. Let’s make connectivity seamless! 🚀</p>
+Welcome to Encodeify—your ultimate tool for generating and scanning QR codes. Whether you’re using our web app or mobile app, Encodeify makes it easy to encode and decode information with ease. Let’s make connectivity seamless!</p>
 
 <p align="center">
   <a href="https://encodeify.netlify.app/">
-    <img src="./Assets/Images/preview.png" alt="Web App Preview" width="1000">
+    <img src="./Assets/Encodeify-thumnail.png" alt="Web App Preview" width="1000">
   </a>
 </p>
+
+<h3 align="center">Download the App Instantly! 📲</h3>
+
+<p align="center">
+  <img src="./Assets/download-qr.png" alt="QR Code to Download Encodeify APK" width="200" height="200">
+</p>
+
+<p align="center">Scan this QR code to download the Encodeify app directly to your device!</p>
+
 
 ## 📋 Table of Contents
 
