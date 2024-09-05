@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./Assets/Images/icon.png" alt="Encodeify Logo" width="150" height="150">
+  <img src="./Assets/Images/icon.png" alt="Encodeify Logo" width="150" height="150" style="border-radius: 30px;">
 </p>
 
 <h1 align="center" style="font-size: 36px;">Encodeify 📲</h1>
