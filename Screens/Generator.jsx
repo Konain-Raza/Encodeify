@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {useRef, useState} from 'react';
 import {
   View,
   Text,
@@ -26,7 +26,7 @@ const Generator = () => {
           buttonNeutral: 'Ask Me Later',
           buttonNegative: 'Cancel',
           buttonPositive: 'OK',
-        }
+        },
       );
       return granted === PermissionsAndroid.RESULTS.GRANTED;
     } catch (err) {
@@ -46,33 +46,40 @@ const Generator = () => {
     } else {
       await saveQRCode();
     }
-    setQRCode('');
   };
 
+  const sanitizeFileName = (filename) => {
+    return filename.replace(/[^a-zA-Z0-9]/g, '').slice(0, 10); // Remove special characters and limit length to 10
+  };
+  
   const saveQRCode = async () => {
     try {
-      const uri = await viewShotRef.current.capture();
-      const path = `${RNFS.DocumentDirectoryPath}/${qrCode || 'QRCode'}.png`;
-
-      await RNFS.writeFile(path, uri, 'base64');
-      await RNFS.scanFile(path);
-      Alert.alert('🎉 Success!', 'Your QR Code is ready and saved!');
+      await viewShotRef.current.capture().then(async (uri) => {
+        const sanitizedQRCode = qrCode ? sanitizeFileName(qrCode) : 'QRCode';
+        const randomIdentifier = Math.random().toString(36).slice(2, 8);
+        const uniqueFileName = `${sanitizedQRCode}_${randomIdentifier}.png`;
+        const path = `${RNFS.DownloadDirectoryPath}/${uniqueFileName}`;
+  
+        await RNFS.moveFile(uri, path);
+        await RNFS.scanFile(path);
+        Alert.alert('🎉 Success!', 'Your QR Code is ready and saved!');
+        console.log('File saved to:', path);
+      });
     } catch (error) {
       console.error(error);
       Alert.alert('Error', 'Failed to download QR Code');
     }
   };
-
+  
   return (
     <View className="flex-1 items-center justify-center bg-gray-900 p-6">
       <Text className="text-3xl text-white mb-6 font-gilroyBold">
         Craft Your QR Code ✨
       </Text>
-      <View className='bg-purple-950 p-10 rounded-3xl'>
+      <View className="bg-purple-950 p-10 rounded-3xl">
         <ViewShot
           ref={viewShotRef}
-          options={{ format: 'png', quality: 1.0, width: 220, height: 220 }}
-        >
+          options={{format: 'png', quality: 1.0, width: 220, height: 220}}>
           <View className="p-4 bg-white shadow-lg border-black rounded-md">
             <QRCode
               value={qrCode || 'https://konainraza.vercel.app'}
@@ -91,8 +98,7 @@ const Generator = () => {
       />
       <TouchableOpacity
         className="w-full bg-purple-950 py-4 rounded-lg"
-        onPress={handleDownloadQRCode}
-      >
+        onPress={handleDownloadQRCode}>
         <Text className="text-white text-center text-lg font-semibold">
           Download QR Code 📥
         </Text>

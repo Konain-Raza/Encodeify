@@ -3,7 +3,7 @@ import { View, Alert, Text, TouchableOpacity } from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import { RNCamera } from 'react-native-camera';
 import Icon from 'react-native-remix-icon';
-// import { Clipboard } from 'react-native';
+import { Clipboard } from 'react-native';
 
 const Scanner = () => {
   const [flashMode, setFlashMode] = useState(RNCamera.Constants.FlashMode.off);
@@ -23,7 +23,7 @@ const Scanner = () => {
   const copyUrl = async () => {
    
     try {
-      // await Clipboard.setString(scannedData);
+      await Clipboard.setString(scannedData);
       
       Alert.alert(
         'Copied!',
